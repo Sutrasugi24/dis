@@ -5,7 +5,24 @@
 @endsection
 
 @section('subcontent')
-    <h2 class="intro-y text-lg font-medium mt-10">{{ $title ?? 'Data Siswa' }}</h2>
+    <h2 class="intro-y text-lg font-medium mt-10 mb-4">{{ $title ?? 'Data Siswa' }}</h2>
+    {{-- Alert for function action --}}
+    @if(session('success'))
+        <div class="alert alert-success-soft show flex items-center mb-2" role="alert">
+            <i data-lucide="alert-triangle" class="w-6 h-6 mr-2"></i> {{ session('success')}}
+        </div>
+    @endif
+    @if(session('info'))
+        <div class="alert alert-primary-soft show flex items-center mb-2" role="alert">
+            <i data-lucide="alert-circle" class="w-6 h-6 mr-2"></i> {{ session('info')}}
+        </div>
+    @endif
+    @if(session('danger'))
+        <div class="alert alert-danger-soft show flex items-center mb-2" role="alert">
+            <i data-lucide="alert-octagon" class="w-6 h-6 mr-2"></i> {{ session('danger') }}
+        </div>
+    @endif
+    {{--END Alert--}}
     <div class="grid grid-cols-12 gap-6 mt-5">
         <div class="intro-y col-span-12 flex flex-wrap sm:flex-nowrap items-center mt-2">
             <a href="{{ route('students.create') }}" class="btn btn-primary shadow-md mr-2">Tambah Data <i class="w-5 h-5" data-lucide="plus"></i></a>
@@ -19,7 +36,7 @@
         </div>
         <!-- BEGIN: Data List -->
         <div class="intro-y col-span-12 overflow-auto lg:overflow-visible">
-            @if($student->total())
+            {{-- @if($student->total()) --}}
             <table class="table table-report -mt-2">
                 <thead>
                     <tr>
@@ -63,9 +80,9 @@
                     @endforeach
                 </tbody>
             </table>
-            @else
+            {{-- @else
                 <h4 class="text-center p-3">Tidak ada data Siswa.</h4>
-            @endif
+            @endif --}}
         </div>
         <!-- END: Data List -->
         <!-- BEGIN: Pagination -->

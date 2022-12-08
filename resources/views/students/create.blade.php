@@ -18,37 +18,52 @@
                 <div id="input" class="p-5">
                     <div class="preview">
                         <div class="mt-3">
-                            <label for="vertical-form-2" class="form-label">Nama</label>
-                            <input id="vertical-form-2" type="text" class="form-control" placeholder="secret">
+                            <label for="nama" class="form-label">Nama</label>
+                            <input id="nama" type="text" class="form-control" placeholder="nama">
                         </div>
                         <div class="mt-3">
-                            <label for="vertical-form-2" class="form-label">Nomor Induk Siswa</label>
-                            <input id="vertical-form-2" type="text" class="form-control" placeholder="secret">
+                            <label for="nis" class="form-label">Nomor Induk Siswa</label>
+                            <input id="nis" type="text" class="form-control" placeholder="secret">
                         </div>
                         <div class="mt-3">
-                            <label for="vertical-form-2" class="form-label">Nomor Induk Siswa Nasional</label>
-                            <input id="vertical-form-2" type="text" class="form-control" placeholder="secret">
+                            <label for="nisn" class="form-label">Nomor Induk Siswa Nasional</label>
+                            <input id="nisn" type="text" class="form-control" placeholder="secret">
                         </div>
                         <div class="mt-3">
-                            <label for="vertical-form-2" class="form-label">Kelas</label>
-                            <input id="vertical-form-2" type="text" class="form-control" placeholder="secret">
+                            <label for="kelas" class="form-label">Kelas</label>
+                            <input id="kelas" type="text" class="form-control" placeholder="secret">
                         </div>
                         <div class="mt-3">
-                            <label for="vertical-form-2" class="form-label">Tahun</label>
-                            <input id="vertical-form-2" type="text" class="form-control" placeholder="secret">
+                            <label for="tahun" class="form-label">Tahun</label>
+                            <input id="tahun" type="text" class="form-control" placeholder="secret">
                         </div>
                         <div class="mt-3">
-                            <label for="vertical-form-2" class="form-label">Ijazah</label>
-                            <input id="vertical-form-2" type="text" class="form-control" placeholder="secret">
+                            <label for="ijazah" class="form-label">Ijazah</label>
+                            <input id="ijazah" type="text" class="form-control" placeholder="secret">
                         </div>
                         <br/>
-                        <div class='mt3'>
-                            <label for="regular-form-1" class="form-label">SKHUN</label>
-                            <input id="regular-form-1" type="text" class="form-control" placeholder="Input text">
+                        <div class='mb-4'>
+                            <label for="skhun" class="form-label">SKHUN</label>
+                            <input id="skhun" type="text" class="form-control" placeholder="secret">
                         </div>
-                        <div class="form-inline mt-5">
-                            <label for="horizontal-form-2" class="form-label sm:w-20">Password</label>
-                            <input id="horizontal-form-2" type="password" class="form-control" placeholder="secret">
+
+                        <div class="mb-2">
+                            <div class="form-group mb-0">
+                                <label for="status">Status</label>
+                            </div>
+                            <div class="form-check inline-block">
+                                <input type="radio" name="status" class="form-check-input" value="active" id="active">
+                                <label for="active" class="form-check-label">Active</label>
+                            </div>
+                            <div class="form-check inline-block">
+                                <input type="radio" name="status" class="form-check-input" value="inactive" id="inactive">
+                                <label for="inactive" class="form-check-label">Inactive</label>
+                            </div>
+                        </div>
+                        <br/>
+                        <div class="form-group">
+                            <button type="button" onClick="window.history.back()" class="btn btn-secondary w-24 mr-1 mb-2">Cancel</button>
+                            <button type="submit" class="btn btn-primary w-24 mr-1 mb-2 ">Submit</button>
                         </div>
                 </div>
             </div>
